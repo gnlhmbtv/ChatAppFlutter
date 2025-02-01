@@ -1,4 +1,5 @@
 import 'package:chatapp/domain/constants/appcolors.dart';
+import 'package:chatapp/repository/screens/profile/profilescreen.dart';
 import 'package:chatapp/repository/screens/widgets/uihelper.dart';
 import 'package:flutter/material.dart';
 import 'package:pinput/pinput.dart';
@@ -64,6 +65,9 @@ class OTPScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Pinput(
+                onCompleted: (value) {
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> ProfileScreen()));
+                },
                 autofocus: true,
                 controller: otpController,
                 defaultPinTheme: defaultPinTheme,

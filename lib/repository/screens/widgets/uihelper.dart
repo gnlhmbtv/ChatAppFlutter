@@ -29,10 +29,10 @@ class UiHelper {
   static CustomButton(
       {required String buttonname,
       required VoidCallback callback,
-      Color? buttoncolor}) {
+         Color? buttoncolor}) {
     return SizedBox(
-      height: 52,
-      width: 327,
+      height: 45,
+      width: 350,
       child: ElevatedButton(
           onPressed: () {
             callback();
@@ -44,7 +44,10 @@ class UiHelper {
           child: Text(
             buttonname,
             style: TextStyle(
-                fontSize: 16, color: Colors.white, fontWeight: FontWeight.w300),
+                fontSize: 16,
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+                fontFamily: "bold"),
           )),
     );
   }
@@ -73,7 +76,7 @@ class UiHelper {
                   color: Theme.of(context).brightness == Brightness.dark
                       ? AppColors.hintdarkmode
                       : AppColors.hintlightmode,
-              fontSize: 14),
+                  fontSize: 14),
               border: InputBorder.none),
         ),
       ),
